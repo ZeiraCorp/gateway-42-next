@@ -13,14 +13,14 @@ let randomDelay =  () => {
   return getRandomInt(1500, 4000);
 }
 // Generate n temperature sensors
-let temperatureSensors = [...Array(10).keys()].map(item => {
+let temperatureSensors = [...Array(5).keys()].map(item => {
   let t = new TemperatureSensor({id:`t${item}`, minTemperature:-10, maxTemperature:10, delay:randomDelay()});
   t.start("generateData");
   return  t;
 });
 
 // Generate n humidity sensors
-let humiditySensors = [...Array(10).keys()].map(item => {
+let humiditySensors = [...Array(5).keys()].map(item => {
   let h = new HumiditySensor({id:`h${item}`, delay:randomDelay()});
   h.start("generateData");
   return  h;
@@ -113,6 +113,7 @@ let iam = () => {
         , INSTANCE_TYPE: process.env.INSTANCE_TYPE || "INSTANCE_TYPE"
         , COMMIT_ID: process.env.COMMIT_ID || "COMMIT_ID"
         , INSTANCE_NUMBER: process.env.INSTANCE_NUMBER || "INSTANCE_NUMBER"
+        , kind:"💧 🔥"
       }
   }));
 }
