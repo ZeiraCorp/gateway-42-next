@@ -1,0 +1,31 @@
+{
+  "name": "gateway-42-next",
+  "version": "1.0.0",
+  "description": "Smarter IoT gateway",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha tests/**",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wey-yu/gateway-42-next.git"
+  },
+  "keywords": [
+    "IOT"
+  ],
+  "author": "@k33g_org",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wey-yu/gateway-42-next/issues"
+  },
+  "homepage": "https://github.com/wey-yu/gateway-42-next#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  },
+  "dependencies": {
+    "redis": "^2.6.5",
+    "seneca": "^3.2.2"
+  }
+}
